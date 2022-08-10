@@ -1,0 +1,32 @@
+name: Deploy site files
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - dev # 只在devr上push触发部署
+    paths-ignore: #下列文件的变更不触发部署，可以自行添加
+      - .idea
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest # 使用ubuntu系统镜像运行自动化脚本
+
+    steps: # 自动化步骤
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install and Build
+        run: |
+          yarn install
+          yarn docs:build
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          # 这里的 ACCESS_TOKEN 名字需要和下文中的相对应
+          ACCESS_TOKEN: ${{ secrets.cloneToken }}
+          # 打包后的文件部署到哪个分支上
+          BRANCH: main
+          # 打包后的文件在哪里
+          FOLDER: docs/.vuepress/dist
