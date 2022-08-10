@@ -1,11 +1,12 @@
 name: Deploy site files
 
 on:
-  push:
-    branches:
-      - dev # 只在devr上push触发部署
-    paths-ignore: # 下列文件的变更不触发部署，可以自行添加
-    - .idea
+    workflow_dispatch:
+    push:
+     branches:
+       - dev # 只在devr上push触发部署
+     paths-ignore: #下列文件的变更不触发部署，可以自行添加
+       - .idea
 
 jobs:
   deploy:
