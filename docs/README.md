@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage:
+heroImage: /images/首页.jpg
 heroText: null
 actions:
    - text: 开始阅读 ->

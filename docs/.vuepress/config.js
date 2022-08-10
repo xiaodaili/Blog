@@ -2,6 +2,7 @@ const {defaultTheme}  = require('@vuepress/theme-default')
 const {searchPlugin} = require('@vuepress/plugin-search')
 
 module.exports={
+    head: [['link', { rel: 'icon', href: '/image.png' }]],
     title:'山楂的日常',
     description:'书以明志  锤炼技艺  快乐生活',
     markdown:{
@@ -13,7 +14,12 @@ module.exports={
         navbar:[
             {text:'首页',link:'/home'},
             {text:'读书日记',link:'/book'},
-            {text:'技术总结',link:'/technique'},
+            {text:'技术总结',
+             children:[
+                 {text:'JS总结',link:'/technique/JavaScript'},
+                 {text:'博客部署',link:'technique/blog'}
+             ]
+            },
             {text:'关于我',link:'/about'}
         ],
         lastUpdated:true,
@@ -21,7 +27,7 @@ module.exports={
         notFound:['是不是迷路了呢，这里什么都没有','这里没有内容，真的到了边界了','你来到了特殊的地方，后期会添加的'],
         backToHome:'回到首页去吧',
         sidebarDepth:4,
-        sidebar:'auto'
+        sidebar:'auto',
     }),
     plugins:[
         searchPlugin({

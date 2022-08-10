@@ -54,6 +54,27 @@ export const searchIndex = [
   },
   {
     "title": "",
+    "headers": [
+      {
+        "level": 2,
+        "title": "基于VuePress部署博客",
+        "slug": "基于vuepress部署博客",
+        "children": []
+      }
+    ],
+    "path": "/technique/blog.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "",
+    "headers": [],
+    "path": "/technique/JavaScript.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "",
     "headers": [],
     "path": "/404.html",
     "pathLocale": "/",
