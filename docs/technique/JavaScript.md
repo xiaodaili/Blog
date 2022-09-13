@@ -1,12 +1,16 @@
 ## 客户端操作
+
 ### BOM对象
+
 1. window 对象：
-    1. 当使用 window.open来打开新的页面的时候  他会返回一个对象， 也就是window本身，可以借助这个值来判断浏览器是否关闭了弹窗的限制
+    1. 当使用 window.open来打开新的页面的时候 他会返回一个对象， 也就是window本身，可以借助这个值来判断浏览器是否关闭了弹窗的限制
 2. loaction 对象
     1. 这个脸面包含了一些 关于 地址栏的操作，search 只能获取？之后的字符串，具体的参数需要自己截取
 3. navigator
-    1. 可以使用navigator  上的plugins 来监听插件的使用
+    1. 可以使用navigator 上的plugins 来监听插件的使用
+
 ### DOM对象
+
 1. MutationObserver
     1. 这个会提供一些对于DOM属性监视的API ，只要当前监听元素的属性发生变化，都会被监听到
 
