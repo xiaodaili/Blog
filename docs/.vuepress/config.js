@@ -18,13 +18,19 @@ module.exports = {
                 text: '技术总结',
                 children: [
                     { text: 'JS总结', link: '/technique/JavaScript' },
-                    { text: '博客部署', link: 'technique/blog' }
+                    { text: '博客部署', link: '/technique/blog' }
                 ]
             },
             {
                 text: '前端相关技术文档收集',
                 children: [
                     { text: '前端面试之道', link: '/pages/interview' }
+                ]
+            },
+            {
+                text:'生活',
+                children: [
+                    { text: '年终总结', link: '/pages/summary' }
                 ]
             },
             { text: '关于我', link: '/about' }
@@ -42,6 +48,10 @@ module.exports = {
                 children: ['README.md','a.md','b.md']
             }
             ],
+            '/pages/summary':[{
+                text:'年终总结',
+                children:['2022.md']
+            }],
             '/': []
         }
     }),
